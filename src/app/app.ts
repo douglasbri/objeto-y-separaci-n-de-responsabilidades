@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { FiguraComponent } from './components/figura';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [FiguraComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
-  protected readonly title = signal('clase-1-11-08-2026');
-}
+export class App {}
