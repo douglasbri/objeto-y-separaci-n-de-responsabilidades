@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { FiguraComponent } from './components/figura';
+import { ArScene } from './components/ar-scene/ar-scene';
 
 @Component({
   selector: 'app-root',
-  imports: [FiguraComponent],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  imports: [ArScene],
+  template: '<app-ar-scene />',
 })
 export class App {}

@@ -1,0 +1,22 @@
+<div class="panel">
+  <button (click)="ar.togglePersonaje()">personaje</button>
+  <button (click)="ar.toggleGrande()">tamaño</button>
+  <span>{{ ar.state().clicks }}</span>
+</div>
+
+<a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; facingMode: user;">
+  <a-assets>
+    <a-asset-item id="modelo" src="modelo.glb"></a-asset-item>
+  </a-assets>
+
+  <a-marker preset="hiro">
+    <a-entity
+      gltf-model="#modelo"
+      [attr.scale]="scale()"
+      position="0 0 0"
+      animation="property: position; to: 0 0.3 0; dir: alternate; dur: 1000; loop: true; easing: easeInOutSine">
+    </a-entity>
+  </a-marker>
+
+  <a-entity camera></a-entity>
+</a-scene>
